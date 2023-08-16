@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Delny Flores" />
+    <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Rick and Morty</title>
+</head>
+
+<body>
+
+    <nav class="container-fluid p-3 my-3 bg-dark text-white">
+        <h1 class="text-center my-4">Rick and Morty</h1>
+        <div class="d-flex justify-content-end  mb-4 ">
+            <button type="button" class="btn btn-primary me-2 gender-button" data-gender="">Todos</button>
+            <button type="button" class="btn btn-primary me-2 gender-button" data-gender="female">Mujer</button>
+            <button type="button" class="btn btn-primary gender-button" data-gender="male">Hombre</button>
+        </div>
+    </nav>
+    <!-- Lista de personajes -->
+    <div class="container-fluid">
+        <div class="row character-list">
+            <div col-4>
+
+            </div>
+        </div>
+    </div>
+
+        <!-- Controles de paginación -->
+
+        <footer class="container-fluid p-3 my-3 bg-dark text-white">
+            <div class="d-flex justify-content-center  mb-4 mt-4">
+                <button type="button" id="firstPage" class="btn btn-secondary  me-2">Primera página</button>
+                <button type="button" id="prevPage" class="btn btn-secondary me-2">Página anterior</button>
+                <span id="currentPage">Página 1</span>
+                <button type="button" id="nextPage" class="btn btn-secondary ms-2">Página siguiente</button>
+                <button type="button" id="lastPage" class="btn btn-secondary ms-2">Última página</button>
+            </div>
+        </footer>
+
+        <!-- Scripts Boostrap y Enlace js -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <script src="app.js"></script>
+
+</body>
+
+</html>
