@@ -19,8 +19,8 @@ h1{
   border-radius: 10px;
   padding: 15px; 
   width: 320px; 
-  height: 550px; 
-  margin-left: 13px;
+  height: 600px; 
+  margin-left: 33px;
 }
 .character img {
   max-width: 100%;
@@ -28,6 +28,10 @@ h1{
   border-radius: 10px;
   transition: transform 2s;
 }
+.gender-button {
+  margin-right: 10px;
+}
+
 
 .character:hover {
   cursor: pointer;

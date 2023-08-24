@@ -16,36 +16,43 @@ async function fetchCharacters(page, gender) {
 
   characterList.innerHTML = "";
 
+  
   data.results.forEach((character) => {
     const characterDiv = document.createElement("div");
     characterDiv.classList.add("col-md-3", "character");
+    characterDiv.style.textAlign = "center";
 
     const characterImg = document.createElement("img");
     characterImg.src = character.image;
     characterDiv.appendChild(characterImg);
 
-    const characterName = document.createElement("h3");
+    const characterName = document.createElement("h4");
     characterName.textContent = `Nombre: ${character.name}`;
     characterDiv.appendChild(characterName);
 
     const characterGender = document.createElement("p");
     characterGender.textContent = `Género: ${character.gender}`;
+    
     characterDiv.appendChild(characterGender);
 
     const characterSpecies = document.createElement("p");
     characterSpecies.textContent = `Especie: ${character.species}`;
+    
     characterDiv.appendChild(characterSpecies);
 
     const characterStatus = document.createElement("p");
     characterStatus.textContent = `Estado: ${character.status}`;
+    
     characterDiv.appendChild(characterStatus);
 
     const characterOrigin = document.createElement("p");
     characterOrigin.textContent = `Origen: ${character.origin.name}`;
+   
     characterDiv.appendChild(characterOrigin);
 
     const characterLocation = document.createElement("p");
     characterLocation.textContent = `Locación: ${character.location.name}`;
+   
     characterDiv.appendChild(characterLocation);
 
     characterList.appendChild(characterDiv);
@@ -58,8 +65,9 @@ async function fetchCharacters(page, gender) {
 
   firstPageBtn.disabled = page === 1;
   prevPageBtn.disabled = page === 1;
-  nextPageBtn.disabled = data.info.next === "";
-  lastPageBtn.disabled = data.info.last === "";
+  lastPageBtn.disabled = page  === 42;
+  nextPageBtn.disabled = page  === 42;
+    
 }
 
 genderButtons.forEach((button) => {
